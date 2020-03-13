@@ -1,0 +1,6 @@
+<section class="container mx-auto">
+  <featured-project *ngFor="let project of featuredProjects; let i=index" 
+    [project]="project"
+    [isInverted]="i % 2 != 0">
+  </featured-project>
+</section>
