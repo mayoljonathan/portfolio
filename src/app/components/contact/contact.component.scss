@@ -1,0 +1,16 @@
+img {
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  filter: invert(0.2);
+  -webkit-filter: invert(0.2);
+}
+
+img:hover {
+  filter: invert(0.6);
+  -webkit-filter: invert(0.6);
+  transform: translate(0, -3px);
+  -moz-transform: translate(0, -3px);
+  -webkit-transform: translate(0, -3px);
+}

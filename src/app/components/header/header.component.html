@@ -1,0 +1,27 @@
+<div class="shadow-md lg:shadow-none">
+  <div class="container mx-auto">
+    <nav class="flex items-center justify-between flex-wrap p-6">
+      <div class="flex items-center flex-shrink-0 mr-6">
+        <a href="" class="font-semibold text-xl">mayoljonathan</a>
+      </div>
+      <div class="block lg:hidden">
+        <button class="flex items-center px-3 py-2 rounded text-blue-600 hover:text-blue-300 hover:border-blue-300" (click)="toggleMenu()">
+          <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+          </svg>
+        </button>
+      </div>
+      <div #mainNav class="w-full block lg:flex lg:items-center lg:w-auto hidden">
+        <div class="lg:flex-grow text-center">
+          <a *ngFor="let link of navLinks" (click)="scrollTo(link)" class="cursor-pointer block mt-4 lg:inline-block lg:mt-0 font-bold text-blue-600 mr-0 lg:mr-16">{{ link }}</a>
+          
+          <div class="block mt-4 lg:inline-block lg:mt-0 pt-2">
+            <a href="https://drive.google.com/file/d/17-VSA2DlBkJgQcPMQqAIKsjMrPHi7IE_/view" target="_blank" rel="noreferrer noopener"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-3 rounded">resume</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
