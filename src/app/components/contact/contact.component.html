@@ -2,13 +2,14 @@
   <section class="relative flex flex-col justify-center items-center h-auto p-6 sm:h-screen text-center">
     <div class="my-8 w-full sm:w-9/12 md:w-1/2">
       <h5>Get in Touch</h5>
-      <p>Yes, I’m currently available for full-time position on web and mobile application developer. 
-        You can reach me at 
-        <a class="text-blue-500" href="mailto:mayoljonathan@gmail.com">mayoljonathan@gmail.com</a>
+      <p>
+        <span *ngIf="isAvailable; else notAvailable">Yes, I’m currently available for full-time position on web and mobile application developer. You can reach me at </span>
+        <ng-template #notAvailable>I'm not currently looking for new opportunities, but you can still contact me at </ng-template>
+        <a class="text-blue-500" [href]="'mailto:'+emailAddress">{{ emailAddress }}</a>
       </p>
 
       <div class="my-12">
-        <a href="https://drive.google.com/file/d/17-VSA2DlBkJgQcPMQqAIKsjMrPHi7IE_/view" target="_blank" rel="noreferrer noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded">View Resume</a>
+        <a [href]="resumeUrl" target="_blank" rel="noreferrer noopener" class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded">View Resume</a>
       </div>
     </div>
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FeaturedProject } from 'src/app/models/featured-project';
+import { DataService } from 'src/app/services/data.service';
+import { Project } from 'src/app/models/project';
 
 @Component({
   selector: 'projects',
@@ -7,26 +9,25 @@ import { FeaturedProject } from 'src/app/models/featured-project';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  featuredProjects: FeaturedProject[];
+  otherProjects: Project[];
 
-  featuredProjects: Array<FeaturedProject>;
+  showAll: boolean = false;
 
-  constructor() {
-    this.featuredProjects = [
-      {
-        name: 'P-Plus - A Lifestyle You Deserve',
-        description: 'A similar app like Grab that currently includes services such as food delivery and online booking of doctors. Built the app using Flutter.',
-        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_500/v1584032005/pplus.png',
-        googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.primary.pplus'
-      },
-      {
-        name: 'P-Plus Driver',
-        description: 'The food delivery driver app for P-Plus accredited merchants and it was also built using Flutter.',
-        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_500/v1584032771/pplus_food_driver_mxitg7.png'
-      },
-    ];
+  constructor(private dataService: DataService) {
+    this.featuredProjects = this.dataService.featuredProjects;
+    this.otherProjects = this.dataService.otherProjects;
   }
 
   ngOnInit(): void {
+  }
+
+  trackBy(index, item: Project) {
+    return item.name;
+  }
+
+  toggleProjects() : void {
+    this.showAll = !this.showAll;
   }
 
 }

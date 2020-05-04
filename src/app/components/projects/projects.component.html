@@ -1,6 +1,23 @@
 <section class="container mx-auto">
-  <featured-project *ngFor="let project of featuredProjects; let i=index" 
-    [project]="project"
-    [isInverted]="i % 2 != 0">
+  <featured-project *ngFor="let project of featuredProjects; let i=index" [project]="project" [isInverted]="i % 2 != 0">
   </featured-project>
+</section>
+
+<section class="container mx-auto">
+  <div class="flex flex-col justify-center items-center pt-64 p-6">
+    <div class="my-8 w-full sm:w-11/12">
+      <h5 class="my-8 text-center">Other Projects</h5>
+      <div class="grid">
+        <ng-container *ngFor="let project of otherProjects; trackBy: trackBy; let i=index">
+          <project-item *ngIf="!showAll ? i < 6 : true" [project]="project"></project-item>
+        </ng-container>
+      </div>
+
+      <div class="my-8 text-center">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 rounded" (click)="toggleProjects()">
+          {{ !showAll ? 'Show More' : 'Show Less' }}
+        </button>
+      </div>
+    </div>
+  </div>
 </section>

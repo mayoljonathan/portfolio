@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeroComponent } from './hero/hero.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FeaturedProjectComponent } from './projects/featured-project/featured-project.component';
+import { ProjectItemComponent } from './projects/project-item/project-item.component';
 
 const components = [
   HeaderComponent,
@@ -14,6 +15,7 @@ const components = [
   AboutComponent,
   ProjectsComponent,
   FeaturedProjectComponent,
+  ProjectItemComponent,
   ContactComponent,
   FooterComponent,
 ];

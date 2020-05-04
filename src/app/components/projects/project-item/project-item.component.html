@@ -1,0 +1,24 @@
+<div class="w-full h-full flex flex-col p-4 sm:p-6 bg-gray-200 rounded">
+  <div class="flex justify-between">
+    <h6 class="m-0 text-xl">
+      <a [href]="project.website ? project.website : project.repositoryUrl" target="_blank" rel="noreferrer noopener">{{ project?.name }}</a>
+    </h6>
+
+    <div class="flex flex-shrink-0 h-full ml-4">
+      <a *ngIf="project.repositoryUrl" [href]="project.repositoryUrl" target="_blank" rel="noreferrer noopener">
+        <img [src]="images.GITHUB_IMG" class="h-6 w-6" [alt]="'Navigate to '+project.name+' repository'">
+      </a>
+      <a *ngIf="project.website" [href]="project.website" target="_blank" rel="noreferrer noopener" class="ml-2">
+        <img [src]="images.EXTERNAL_LINK_IMG" class="h-6 w-6" [alt]="'Navigate to '+project.name">
+      </a>
+    </div>
+  </div>
+  
+  <p class="mt-2 mb-auto text-sm">{{ project?.description }}</p>
+
+  <div class="mt-10">
+    <ul class="flex flex-wrap">
+      <li class="mr-3 text-xs text-gray-600" *ngFor="let tech of project.techStack">{{ tech }}</li>
+    </ul>
+  </div>
+</div>

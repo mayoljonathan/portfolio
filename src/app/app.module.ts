@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from './components/components.module';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     ComponentsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

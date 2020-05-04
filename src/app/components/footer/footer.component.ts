@@ -6,9 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  portfolioUrl: string = `${window.location.origin}/portfolio_2018/`;
-
   constructor() { }
 
   ngOnInit(): void {
