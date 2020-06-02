@@ -1,6 +1,6 @@
 <div class="container mx-auto">
   <section class="relative flex flex-col justify-center items-center h-auto p-6 sm:h-screen text-center">
-    <div class="my-8 w-full sm:w-9/12 md:w-1/2">
+    <div class="mt-8 mb-12 w-full sm:w-9/12 md:w-1/2">
       <h5>Get in Touch</h5>
       <p>
         <span *ngIf="isAvailable; else notAvailable">Yes, I’m currently available for full-time position on web and mobile application developer. You can reach me at </span>
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="absolute inset-x-0 bottom-0 flex justify-center p-6 sm:p-8">
+    <div class="absolute inset-x-0 bottom-0 flex justify-center p-4">
       <a *ngFor="let social of socials" [href]="social.redirectUrl" class="m-2" target="_blank" rel="noreferrer noopener">
         <img [src]="social.assetUrl" class="w-8 sm:w-10" [alt]="social.name">
       </a>

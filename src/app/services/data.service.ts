@@ -20,18 +20,26 @@ export class DataService {
     this.otherProjects = this.getOtherProjects();
   }
 
-  getFeaturedProjects() : FeaturedProject[] {
+  getFeaturedProjects(): FeaturedProject[] {
     return [
       new FeaturedProject({
         name: 'P-Plus - A Lifestyle You Deserve',
-        description: 'A similar app like Grab that currently includes services such as food delivery and online booking of doctors. Built the app using Flutter.',
-        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_500/v1584032005/pplus.png',
+        description: 'A similar app like Grab that currently includes services such as food delivery and online booking of doctors.',
+        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_1000/v1591072738/portfolio/pplus.png',
+        techStack: ['Flutter', 'ScopedModel', 'Provider', 'MVVM'],
         googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.primary.pplus'
       }),
       new FeaturedProject({
         name: 'P-Plus Driver',
-        description: 'The food delivery driver app for P-Plus accredited merchants and it was also built using Flutter.',
-        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_500/v1584032771/pplus_food_driver_mxitg7.png'
+        description: 'The food delivery driver app for P-Plus accredited merchants.',
+        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_1000/v1591072738/portfolio/pplus_driver.png',
+        techStack: ['Flutter', 'ScopedModel', 'MVVM'],
+      }),
+      new FeaturedProject({
+        name: 'P-Plus Merchant Cashier',
+        description: 'A merchant app that will be used by the cashier to verify vouchers and add loyalty points to customers.',
+        imageUrl: 'https://res.cloudinary.com/tsebvaan/image/upload/c_scale,w_1000/v1591072737/portfolio/pplus_merchant.png',
+        techStack: ['Flutter', 'ScopedModel', 'MVVM'],
       })
     ];
   }
@@ -41,7 +49,7 @@ export class DataService {
       new Project({
         name: 'Portfolio v2',
         description: 'The website that you are currently viewing 😀',
-        techStack: ['Angular 9'],
+        techStack: ['Angular 9', 'TailwindCSS'],
         repositoryUrl: 'https://github.com/mayoljonathan/portfolio'
       }),
       new Project({
@@ -116,21 +124,21 @@ export class DataService {
 
   getSocials(): Social[] {
     return [
-      {
+      new Social({
         name: 'LinkedIn',
         assetUrl: Images.LINKEDIN_IMG,
         redirectUrl: 'https://www.linkedin.com/in/jonathan-jay-mayol-00a373141'
-      },
-      {
+      }),
+      new Social({
         name: 'GitHub',
         assetUrl: Images.GITHUB_IMG,
         redirectUrl: 'https://github.com/mayoljonathan'
-      },
-      {
+      }),
+      new Social({
         name: 'Facebook',
         assetUrl: Images.FACEBOOK_IMG,
         redirectUrl: 'https://www.facebook.com/mayoljonathan.ph'
-      }
+      })
     ];
   }
 
