@@ -53,8 +53,22 @@ export class DataService {
         repositoryUrl: 'https://github.com/mayoljonathan/portfolio'
       }),
       new Project({
+        name: 'Flutter Fast Food',
+        description: 'A fast food app made with Flutter!',
+        techStack: ['Flutter', 'Provider', 'Lottie'],
+        website: 'https://mayoljonathan.github.io/flutter_fast_food_landing',
+        repositoryUrl: 'https://github.com/mayoljonathan/flutter_fast_food'
+      }),
+      new Project({
+        name: 'Flutter Gameboy',
+        description: 'An app that simulates the look for Gameboy Advance SP. This is my entry for <a href="https://flutterhackathon.com" target="_blank" rel="noreferrer noopener">Flutter Hackathon 2020</a>.',
+        techStack: ['Flutter', 'Provider'],
+        website: 'https://mayoljonathan.github.io/flutter_gameboy_advance_sp',
+        repositoryUrl: 'https://github.com/mayoljonathan/flutter_gameboy_advance_sp'
+      }),
+      new Project({
         name: 'Jollibee Kiosk',
-        description: 'A kiosk app for Jollibee (for POC).',
+        description: 'A kiosk app for Jollibee (POC).',
         techStack: ['Flutter', 'Cloud Firestore'],
         repositoryUrl: 'https://github.com/mayoljonathan/jollibee_kiosk'
       }),
@@ -72,13 +86,13 @@ export class DataService {
         website: 'https://mayoljonathan.github.io/showcase-it-apanel',
         repositoryUrl: 'https://github.com/mayoljonathan/showcase-it-apanel'
       }),
-      new Project({
-        name: 'ShowcaseIT - Report Generator',
-        description: 'A report generator for ShowcaseIT.',
-        techStack: ['Angular 5', 'Firebase'],
-        website: 'https://mayoljonathan.github.io/ShowcaseIT-Report-Generator',
-        repositoryUrl: 'https://github.com/mayoljonathan/ShowcaseIT-Report-Generator'
-      }),
+      // new Project({
+      //   name: 'ShowcaseIT - Report Generator',
+      //   description: 'A report generator for ShowcaseIT.',
+      //   techStack: ['Angular 5', 'Firebase'],
+      //   website: 'https://mayoljonathan.github.io/ShowcaseIT-Report-Generator',
+      //   repositoryUrl: 'https://github.com/mayoljonathan/ShowcaseIT-Report-Generator'
+      // }),
       new Project({
         name: 'ACLC Group Portal',
         description: 'A social media mobile app inspired on Facebook Groups.',
