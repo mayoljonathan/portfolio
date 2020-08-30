@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'header',
@@ -12,13 +13,18 @@ export class HeaderComponent implements OnInit {
   navLinks: Array<string> = ['about', 'projects', 'contact'];
 
   constructor(
-    private scrollToService: ScrollToService
-  ) {}
+    private scrollToService: ScrollToService,
+    private dataService: DataService,
+  ) { }
 
   ngOnInit(): void {
   }
 
-  get isMenuOpen() : boolean {
+  get isAvailable() {
+    return this.dataService.isAvailable;
+  }
+
+  get isMenuOpen(): boolean {
     return this.mainNav.nativeElement.classList.contains('hidden');
   }
 
