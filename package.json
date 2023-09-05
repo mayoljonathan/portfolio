@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && ng serve",
     "hmr": "ng serve --configuration hmr --o",
     "build": "ng build --prod --build-optimizer",
     "deploy": "ng deploy --branch=master --repo=https://github.com/mayoljonathan/mayoljonathan.github.io.git --cname=mayoljonathan.com",
@@ -23,6 +23,7 @@
     "@angular/router": "~9.0.0",
     "@ikamva/ngx-tailwindcss": "0.0.2",
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
+    "querystring-es3": "^0.2.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

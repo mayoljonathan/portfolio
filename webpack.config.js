@@ -1,4 +1,9 @@
 module.exports = {
+  resolve: {
+    alias: {
+      querystring: require.resolve("querystring-es3"),
+    },
+  },
   module: {
     rules: [
       {
@@ -10,10 +15,10 @@ module.exports = {
           plugins: () => [
             require("postcss-import"),
             require("tailwindcss"),
-            require("autoprefixer")
-          ]
-        }
-      }
-    ]
-  }
+            require("autoprefixer"),
+          ],
+        },
+      },
+    ],
+  },
 };
